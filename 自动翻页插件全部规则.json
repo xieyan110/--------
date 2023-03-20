@@ -917,8 +917,8 @@
     },
     {
         "name": "动漫之家手機版 - 閱讀",
-        "example": "https://m.dmzj.com/view/41903/64446.html",
-        "url": "^https?://m\\.dmzj\\.com/view/\\d+/\\d+\\.html",
+        "example": "https://m.idmzj.com/view/41903/64446.html",
+        "url": "^https?://m\\.idmzj\\.com/view/\\d+/\\d+\\.html",
         "pinUrl": true,
         
         "init": "function ge(e){return document.querySelector(e)};function geAll(e){return document.querySelectorAll(e)};ge('.iconRet').setAttribute('onclick','goBack();');geAll('.letchepter>a[onclick]').forEach(a=>{a.removeAttribute('onclick')});let code=Array.from(document.scripts).find(s=>s.innerHTML.search(/comic_id/)>-1).innerHTML.replaceAll('\"','');let n=code.search(/next_chap/);let p=code.search(/prev_chap/);let cm=code.match(/comic_id:(\\d+)/)[1];if(n>-1){let nm=code.match(/next_chap_id:(\\d+)/)[1];let url='/view/'+cm+'/'+nm+'.html';ge('.afterChapter').href=url}else{ge('.afterChapter').href=ge('.ChapterLestMune').href}if(p>-1){let pm=code.match(/prev_chap_id:(\\d+)/)[1];let url='/view/'+cm+'/'+pm+'.html';ge('.beforeChapter').href=url}else{ge('.beforeChapter').href=ge('.ChapterLestMune').href}",
@@ -932,27 +932,27 @@
     },
     {
         "name": "动漫之家2 - 閱讀",
-        "example": "https://www.dmzj.com/view/siwangleyuan/75382.html",
-        "url": "^https?://www\\.dmzj\\.com/view/",
+        "example": "https://www.idmzj.com/view/siwangleyuan/75382.html",
+        "url": "^https?://www\\.idmzj\\.com/view/",
         "pinUrl": true,
         
         "action": 1,
         "waitElement": [
             ".btmBtnBox"
         ],
-        "init": "let code=Array.from(document.scripts).find(s=>s.innerHTML.search(/arr_img/)>-1).innerHTML.slice(71,-1);let Data=eval('('+eval(code).slice(11,-2)+')');let imgData=Data.page_url.split('\\r\\n');let host='https://images.dmzj.com/';let _img='';for(let i=0;i<imgData.length;i++){_img+=`<img src='${host}${imgData[i]}'>`};document.querySelector('.comic_wraCon').innerHTML=_img",
+        "init": "let code=Array.from(document.scripts).find(s=>s.innerHTML.search(/arr_img/)>-1).innerHTML.slice(71,-1);let Data=eval('('+eval(code).slice(11,-2)+')');let imgData=Data.page_url.split('\\r\\n');let host='https://images.idmzj.com/';let _img='';for(let i=0;i<imgData.length;i++){_img+=`<img src='${host}${imgData[i]}'>`};document.querySelector('.comic_wraCon').innerHTML=_img",
         "nextLink": "span.next>a",
         "pageElement": ".comic_wraCon",
         "replaceElement": "head>title,.wrap_last_head,.wrap_last_mid,.btmBtnBox",
-        "pageInit": "let code=Array.from(doc.scripts).find(s=>s.innerHTML.search(/arr_img/)>-1).innerHTML.slice(71,-1);let Data=eval('('+eval(code).slice(11,-2)+')');let imgData=Data.page_url.split('\\r\\n');let host='https://images.dmzj.com/';let _img='';for(let i=0;i<imgData.length;i++){_img+=`<img src='${host}${imgData[i]}'>`};doc.querySelector('.comic_wraCon').innerHTML=_img",
+        "pageInit": "let code=Array.from(doc.scripts).find(s=>s.innerHTML.search(/arr_img/)>-1).innerHTML.slice(71,-1);let Data=eval('('+eval(code).slice(11,-2)+')');let imgData=Data.page_url.split('\\r\\n');let host='https://images.idmzj.com/';let _img='';for(let i=0;i<imgData.length;i++){_img+=`<img src='${host}${imgData[i]}'>`};doc.querySelector('.comic_wraCon').innerHTML=_img",
         
         "pageBarText": 1,
         "css": ".nav-pagination,.img_land_prev,.img_land_next,#page_select,.img_info,.title.pr>em:nth-child(5),.title.pr>span{display:none!important}.comic_wraCon>img{max-width: 100% !important;display: block !important;margin: 0 auto -2px auto !important;border:0px!important;padding:0px!important;}"
     },
     {
         "name": "动漫之家2 - 分類",
-        "example": "https://www.dmzj.com/update/",
-        "url": "^https?://www\\.dmzj\\.com/(update|category|rank)",
+        "example": "https://www.idmzj.com/update/",
+        "url": "^https?://www\\.idmzj\\.com/(update|category|rank)",
         "nextLink": "//a[text()='下一页']",
         "pageElement": ".list_con_li,.ph_r_con_li",
         "replaceElement": ".top_page.page,.bottom_page.page",
@@ -960,8 +960,8 @@
     },
     {
         "name": "动漫之家 - 閱讀",
-        "example": "https://manhua.dmzj.com/shenghuomosgushimentiaozhanmigong/118093.shtml",
-        "url": "^https?://manhua\\.dmzj\\.com/[a-z]+/\\d+\\.shtml",
+        "example": "https://manhua.idmzj.com/shenghuomosgushimentiaozhanmigong/118093.shtml",
+        "url": "^https?://manhua\\.idmzj\\.com/[a-z]+/\\d+\\.shtml",
         "pinUrl": true,
         
         "action": 1,
@@ -979,8 +979,8 @@
     },
     {
         "name": "动漫之家 - 分類",
-        "example": "https://manhua.dmzj.com/update_1.shtml",
-        "url": "^https?://manhua\\.dmzj\\.com/",
+        "example": "https://manhua.idmzj.com/update_1.shtml",
+        "url": "^https?://manhua\\.idmzj\\.com/",
         "action": 1,
         "nextLink": "//a[text()='下一页']",
         "pageElement": ".newpic_bg,.newpic_bgno,.tcaricature_block.tcaricature_block2",
@@ -7010,7 +7010,7 @@
     {
         "name": "动漫之家",
         "action": 1,
-        "url": "^https?://(www|manhua)\\.(dmzj|178)\\.com/.*/\\d+\\.s?html",
+        "url": "^https?://(www|manhua)\\.(idmzj|178)\\.com/.*/\\d+\\.s?html",
         "nextLink": "a.btm_chapter_btn.fr",
         "pageElement": "div.comic_wraCon",
         "init": "let imgCon=document.querySelector('div.comic_wraCon'),ops=document.querySelectorAll('option');imgCon.innerHTML='';[].forEach.call(ops,op=>{let img=document.createElement('img');img.src=op.value;imgCon.appendChild(img)})",
