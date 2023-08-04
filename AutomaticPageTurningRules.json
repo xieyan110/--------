@@ -1,3 +1,41 @@
 [
-    
+    {
+        "name": "PS4游戏下载-PS4破解游戏资源-PS4破解中文游戏pkg下载 - 游戏年轮",
+        "url": "^https://www\\.bibgame\\.com",
+        "pageElement": "//*[@id='topicList']/li",
+        "nextLink": "//a[text()='➡']/@href",
+        "type": 0
+    },
+    {
+        "name": "樱花动漫(P)",
+        "url": "^https://m\\.yhdmp\\.live/vp",
+        "enable": 0
+    },
+    {
+        "name": "rawkuma",
+        "url": "^https://rawkuma\\.com",
+        "pageElement": "#readerarea > img",
+        "nextLinkByJs": "var str = doc.querySelector('#content > div > script:nth-child(2)').innerHTML;var regex = new RegExp(`\"nextUrl\":\"(.*?)\"`);var match = str.match(regex);if(match.length === 2){ return new URL(match[1]).href;}"
+    },
+    {
+        "name": "rawkumaList",
+        "url": "^https://rawkuma\\.com/manga",
+        "pageElement": "#content > div > div.postbody > div.bixbox.seriesearch > div.mrgn > div.listupd > div.bs",
+        "nextLinkByJs": "let u = doc.querySelector(`#content > div > div.postbody > div.bixbox.seriesearch > div.mrgn > div.hpage > a.r`).href;if(u.search('http') == -1){return `https://rawkuma.com/manga/` + u;}else{return u;}"
+    },
+    {
+        "name": "角色扮演 - 游戏列表 - vgtime.com",
+        "url": "^https://www\\.vgtime\\.com",
+        "loadMore": "#tag_glist_more"
+    },
+    {
+        "name": "漫画大全 - 看漫画手机版",
+        "url": "^https://m\\.manhuagui\\.com",
+        "loadMore": "body > div#more.more"
+    },
+    {
+        "name": "Expreview",
+        "url": "^https://www.lao6youxi.com/",
+        "loadMore": "body > div > div.site-content > div > div.row > div > div > main > div.infinite-scroll-action > div"
+    }
 ]
