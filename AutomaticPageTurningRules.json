@@ -29,11 +29,6 @@
         "loadMore": "#tag_glist_more"
     },
     {
-        "name": "漫画大全 - 看漫画手机版",
-        "url": "^https://m\\.manhuagui\\.com\\list\\",
-        "loadMore": "body > div#more.more"
-    },
-    {
         "name": "Expreview",
         "url": "^https://www.lao6youxi.com/",
         "loadMore": "body > div > div.site-content > div > div.row > div > div > main > div.infinite-scroll-action > div"
