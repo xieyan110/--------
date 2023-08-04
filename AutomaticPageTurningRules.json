@@ -30,7 +30,7 @@
     },
     {
         "name": "漫画大全 - 看漫画手机版",
-        "url": "^https://m\\.manhuagui\\.com",
+        "url": "^https://m\\.manhuagui\\.com\\list\\",
         "loadMore": "body > div#more.more"
     },
     {
