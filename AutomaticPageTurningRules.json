@@ -12,12 +12,6 @@
         "enable": 0
     },
     {
-        "name": "rawkuma",
-        "url": "^https://rawkuma\\.com",
-        "pageElement": "#readerarea > img",
-        "nextLinkByJs": "var str = doc.querySelector('#content > div > script:nth-child(2)').innerHTML;var regex = new RegExp(`\"nextUrl\":\"(.*?)\"`);var match = str.match(regex);if(match.length === 2){ return new URL(match[1]).href;}"
-    },
-    {
         "name": "rawkumaList",
         "url": "^https://rawkuma\\.com/manga",
         "pageElement": "#content > div > div.postbody > div.bixbox.seriesearch > div.mrgn > div.listupd > div.bs",
